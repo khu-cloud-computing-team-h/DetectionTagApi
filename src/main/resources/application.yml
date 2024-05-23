@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: image_tag_service
+
+  cloud:
+    gcp:
+      project_id: ${GOOGLE_PROJECT_ID}
+      credentials: ${GOOGLE_APPLICATION_CREDENTIALS}
+
+  # MultiPartFile 사이즈
+  servlet:
+    multipart:
+      max-file-size: 10MB
+
