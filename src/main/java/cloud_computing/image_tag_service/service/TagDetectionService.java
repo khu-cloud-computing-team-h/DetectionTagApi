@@ -38,7 +38,7 @@ public class TagDetectionService {
                 }
             }
         }catch (IOException e) {
-            throw new TagDetectionException("태그 감지 오류", e);
+            throw new TagDetectionException("태그 탐지 오류", e);
         }
 
         return tagList;
