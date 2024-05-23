@@ -35,3 +35,9 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# 서비스 계정 키 파일
+src/main/resources/cloud-computing-423606-f2ae71ee82d2.json
+
+# .gitignore
+.gitignore
