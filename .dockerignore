@@ -1,0 +1,6 @@
+.dockerignore
+Dockerfile
+.idea
+.gitignore
+*.md
+src/main/resources/cloud-computing-423606-f2ae71ee82d2.json
