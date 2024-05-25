@@ -1,7 +1,6 @@
 package cloud_computing.image_tag_service.service;
 
 import com.google.cloud.translate.Translate;
-import com.google.cloud.translate.TranslateOptions;
 import com.google.cloud.translate.Translation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
