@@ -12,3 +12,6 @@ spring:
     multipart:
       max-file-size: 10MB
 
+client:
+  host:
+    address: ${CLIENT_HOST_ADDRESS}
