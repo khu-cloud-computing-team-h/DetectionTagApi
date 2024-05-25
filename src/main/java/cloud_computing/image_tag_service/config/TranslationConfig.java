@@ -18,7 +18,6 @@ public class TranslationConfig {
 
     @Value("${spring.cloud.gcp.credentials}")
     private String GOOGLE_APPLICATION_CREDENTIALS;
-
     @Bean
     public Translate translate() throws IOException {
         GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream(GOOGLE_APPLICATION_CREDENTIALS));
