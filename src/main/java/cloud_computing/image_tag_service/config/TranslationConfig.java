@@ -3,7 +3,6 @@ package cloud_computing.image_tag_service.config;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.translate.Translate;
 import com.google.cloud.translate.TranslateOptions;
-import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +17,6 @@ public class TranslationConfig {
 
     @Value("${spring.cloud.gcp.credentials}")
     private String GOOGLE_APPLICATION_CREDENTIALS;
-
     @Bean
     public Translate translate() throws IOException {
         GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream(GOOGLE_APPLICATION_CREDENTIALS));
