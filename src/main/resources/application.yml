@@ -15,3 +15,7 @@ spring:
 client:
   host:
     address: ${CLIENT_HOST_ADDRESS}
+
+auth:
+  server-url: ${AUTH_SERVER_URL}
+  api-url: ${AUTH_API_URL}
