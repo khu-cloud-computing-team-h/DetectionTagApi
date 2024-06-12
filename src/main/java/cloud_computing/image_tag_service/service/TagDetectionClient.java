@@ -1,8 +1,10 @@
 package cloud_computing.image_tag_service.service;
 
 import cloud_computing.image_tag_service.exception.TagDetectionException;
+import cloud_computing.image_tag_service.repository.TagRepository;
 import com.google.cloud.vision.v1.*;
 import com.google.protobuf.ByteString;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -11,8 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class TagDetectionService {
+@RequiredArgsConstructor
+public class TagDetectionClient {
+    private final TagRepository tagRepository;
     private static final Integer MAX_RESULTS = 10;
+
     public List<String> detectTag(InputStream imageInputStream) throws TagDetectionException {
         List<AnnotateImageRequest> requests = new ArrayList<>();
         List<String> tagList = new ArrayList<>();
@@ -37,10 +42,13 @@ public class TagDetectionService {
                     }
                 }
             }
+
+
+
         }catch (IOException e) {
             throw new TagDetectionException("태그 탐지 오류", e);
         }
-
         return tagList;
     }
+
 }
