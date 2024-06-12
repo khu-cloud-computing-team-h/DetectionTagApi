@@ -12,10 +12,6 @@ spring:
     multipart:
       max-file-size: 10MB
 
-client:
-  host:
-    address: ${CLIENT_HOST_ADDRESS}
-
 auth:
   server-url: ${AUTH_SERVER_URL}
   api-url: ${AUTH_API_URL}
