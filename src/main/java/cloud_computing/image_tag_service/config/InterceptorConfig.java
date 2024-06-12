@@ -21,6 +21,6 @@ public class InterceptorConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new TokenInterceptor(authServerURL, authApiURL))
                 .order(1)
-                .addPathPatterns("/api/vision");
+                .addPathPatterns("/api/vision/**");
     }
 }
