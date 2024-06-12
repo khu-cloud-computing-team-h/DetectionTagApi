@@ -15,4 +15,4 @@ ENV APP_HOME=/app
 WORKDIR $APP_HOME
 ARG JAR_FILE=build/libs/*.jar
 COPY --from=build $APP_HOME/$JAR_FILE ./app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=prod"]
